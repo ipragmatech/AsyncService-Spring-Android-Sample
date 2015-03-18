@@ -1,1 +1,2 @@
-# AsyncService-Spring-Android-Sample uses a AsuncService with spring android library to demostrate request handling.
+# AsyncService-Spring-Android-Sample
+It uses a AsyncService with spring android library to demonstrate request handling.
