@@ -45,8 +45,4 @@
 -keep interface com.ipragmatech.asyncservice.** { *; }
 
 #Keep Serializable
--keepclassmembers class * implements java.io.Serializable {*;}
--keepclassmembers class * {
-    @org.codehaus.jackson.annotate.* *;
-    @com.fasterxml.jackson.annotation.* *;
-}
+-keep class * implements java.io.Serializable
