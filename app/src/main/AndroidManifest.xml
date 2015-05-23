@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="1890aabc478443946dbef59da5b6249b5cce2c0f" />
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- Include following permission if you want to cache images on SD card -->

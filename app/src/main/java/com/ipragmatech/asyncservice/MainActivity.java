@@ -21,12 +21,12 @@ import com.joanzapata.android.asyncservice.api.annotation.OnMessage;
 import com.joanzapata.android.asyncservice.api.internal.AsyncService;
 
 
-public class MainActivity extends ActionBarActivity {
 
+
+public class MainActivity extends ActionBarActivity {
 
     @InjectService
     public static GithubService service;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,10 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_async);
         setTitle("Github Users");
         service.getUserAsyncWithCache();
+
+
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -48,7 +51,6 @@ public class MainActivity extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // Take appropriate action for each action item click
         switch (item.getItemId()) {
-
             case R.id.action_refresh:
                 service.getUserAsyncWithCache();
                 return true;
