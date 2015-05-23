@@ -35,6 +35,28 @@ import java.util.Map;
 })
 public class User implements Serializable {
 
+    public User() {
+    }
+
+    public User(String created, String createdAt, Integer followers, Integer followersCount, String fullname, String gravatarId, String id, String language, String location, String login, String name, Integer publicRepoCount, Integer repos, Double score, String type, String username) {
+        this.created = created;
+        this.createdAt = createdAt;
+        this.followers = followers;
+        this.followersCount = followersCount;
+        this.fullname = fullname;
+        this.gravatarId = gravatarId;
+        this.id = id;
+        this.language = language;
+        this.location = location;
+        this.login = login;
+        this.name = name;
+        this.publicRepoCount = publicRepoCount;
+        this.repos = repos;
+        this.score = score;
+        this.type = type;
+        this.username = username;
+    }
+
     @JsonProperty("id")
     private String id;
     @JsonProperty("gravatar_id")
