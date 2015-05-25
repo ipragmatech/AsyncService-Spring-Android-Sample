@@ -37,12 +37,8 @@
 -dontwarn sun.nio.**
 -dontwarn sun.reflect.**
 
-
-
-#iPragmatech Specific
-#-dontwarn com.ipragmatech.socialengineapi.**
--keep class com.ipragmatech.asyncservice.** { *; }
--keep interface com.ipragmatech.asyncservice.** { *; }
+#SnappyDB
+-keep class com.esotericsoftware.kryo.** {*;}
 
 #Keep Serializable
--keep class * implements java.io.Serializable
+-keep class * implements java.io.Serializable{*;}

@@ -19,14 +19,6 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 })
 public class UserResponse implements Serializable {
 
-    public UserResponse() {
-    }
-
-    public UserResponse(List<User> users) {
-
-        this.users = users;
-    }
-
     @JsonProperty("users")
     private List<User> users = new ArrayList<User>();
     @JsonIgnore

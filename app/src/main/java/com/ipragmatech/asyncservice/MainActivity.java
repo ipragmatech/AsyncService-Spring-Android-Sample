@@ -14,13 +14,14 @@ import android.view.Window;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.esotericsoftware.kryo.Kryo;
 import com.ipragmatech.asyncservice.adapter.GithubUserListAdapter;
 import com.ipragmatech.asyncservice.model.response.UserResponse;
 import com.joanzapata.android.asyncservice.api.annotation.InjectService;
 import com.joanzapata.android.asyncservice.api.annotation.OnMessage;
 import com.joanzapata.android.asyncservice.api.internal.AsyncService;
 
-
+import java.io.ByteArrayOutputStream;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -35,6 +36,13 @@ public class MainActivity extends ActionBarActivity {
         AsyncService.inject(this);
         setContentView(R.layout.activity_async);
         setTitle("Github Users");
+
+        UserResponse response=new UserResponse();
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        Kryo kryo = new Kryo();
+        kryo.setAsmEnabled(true);
+        kryo.register(response.getClass());
+
         service.getUserAsyncWithCache();
 
 
